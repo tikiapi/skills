@@ -1,0 +1,27 @@
+{
+  "name": "tikiapi",
+  "version": "0.1.0",
+  "description": "TikiAPI skills for images and video: generation with live prices, consistent characters, ad videos end to end, ad scripts, audience tests and colour looks. Uses the TikiAPI MCP server or REST API with your key from TIKIAPI_KEY.",
+  "author": {
+    "name": "TikiAPI",
+    "url": "https://tikiapi.com"
+  },
+  "homepage": "https://tikiapi.com/mcp",
+  "repository": "https://github.com/tikiapi/skills",
+  "license": "MIT",
+  "keywords": [
+    "tikiapi",
+    "image-generation",
+    "video-generation",
+    "seedance",
+    "nano-banana",
+    "ai-video",
+    "ai-image",
+    "ad-video",
+    "ad-script",
+    "consistent-character",
+    "voice-over",
+    "color-grading",
+    "mcp"
+  ]
+}

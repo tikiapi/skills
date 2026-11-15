@@ -1,0 +1,26 @@
+{
+  "$schema": "https://cursor.com/schemas/cursor-plugin/plugin.json",
+  "name": "tikiapi",
+  "displayName": "TikiAPI",
+  "version": "0.1.0",
+  "description": "Images and video through TikiAPI: generation with live prices, consistent characters, ad videos from script to cut, ad scripts, audience tests and colour looks.",
+  "author": {
+    "name": "TikiAPI",
+    "email": "support@tikiapi.com"
+  },
+  "publisher": "TikiAPI",
+  "homepage": "https://tikiapi.com/mcp",
+  "repository": "https://github.com/tikiapi/skills",
+  "license": "MIT",
+  "category": "ai-content",
+  "keywords": [
+    "tikiapi",
+    "image-generation",
+    "video-generation",
+    "seedance",
+    "ad-video",
+    "consistent-character",
+    "voice-over",
+    "color-grading"
+  ]
+}

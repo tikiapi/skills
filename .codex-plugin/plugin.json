@@ -1,0 +1,46 @@
+{
+  "name": "tikiapi",
+  "version": "0.1.0",
+  "description": "Images and video through TikiAPI: generation with live prices, consistent characters, ad videos from script to cut, ad scripts, audience tests and colour looks.",
+  "author": {
+    "name": "TikiAPI",
+    "email": "support@tikiapi.com",
+    "url": "https://tikiapi.com"
+  },
+  "homepage": "https://tikiapi.com/mcp",
+  "repository": "https://github.com/tikiapi/skills",
+  "license": "MIT",
+  "keywords": [
+    "tikiapi",
+    "image-generation",
+    "video-generation",
+    "seedance",
+    "ad-video",
+    "consistent-character",
+    "voice-over",
+    "color-grading"
+  ],
+  "skills": "./",
+  "interface": {
+    "displayName": "TikiAPI",
+    "shortDescription": "Generate images and video, and make ads end to end",
+    "longDescription": "TikiAPI skills turn Codex into a small video studio. Generate images and clips with Seedance, Nano Banana, GPT Image and Seedream at live prices, keep a person consistent across shots, write and test ad scripts on simulated viewers, make a full vertical ad from script to finished cut, and match a colour look. Calls the TikiAPI MCP server or REST API with the key from TIKIAPI_KEY, prices every video before ordering it, and returns links.",
+    "developerName": "TikiAPI",
+    "category": "Design",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://tikiapi.com",
+    "defaultPrompt": [
+      "Make a 9:16 product photo of this bottle with TikiAPI",
+      "Write a 30-second ad script for my app and test it on the audience room",
+      "Make a vertical ad video for my product, script to final cut",
+      "Create a character I can reuse in every shot",
+      "Match the colour look of this film still in a Seedance clip"
+    ],
+    "brandColor": "#FF6A00",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

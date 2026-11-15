@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Audience"
+  short_description: "Test a script or a cut on four cold viewers"
+  default_prompt: "Use $tikiapi-audience to test this script on the audience room."

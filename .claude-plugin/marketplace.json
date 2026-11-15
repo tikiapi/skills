@@ -1,0 +1,23 @@
+{
+  "name": "tikiapi",
+  "owner": {
+    "name": "TikiAPI",
+    "url": "https://tikiapi.com"
+  },
+  "plugins": [
+    {
+      "name": "tikiapi",
+      "source": "./",
+      "description": "Images and video through TikiAPI: generation with live prices, consistent characters, ad videos from script to cut, audience tests and colour looks.",
+      "version": "0.1.0",
+      "skills": [
+        "./tikiapi-generate",
+        "./tikiapi-character",
+        "./tikiapi-ad-video",
+        "./tikiapi-ad-script",
+        "./tikiapi-audience",
+        "./tikiapi-look"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Generate"
+  short_description: "Generate images and video at live prices"
+  default_prompt: "Use $tikiapi-generate to make a 9:16 picture of my product and tell me the price first."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Ad Video"
+  short_description: "A vertical ad from script to final cut"
+  default_prompt: "Use $tikiapi-ad-video to make a 30-second vertical ad for my product."

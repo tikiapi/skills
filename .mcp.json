@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "tikiapi": {
+      "type": "http",
+      "url": "https://mcp.tikiapi.com/mcp",
+      "headers": { "Authorization": "Bearer ${TIKIAPI_KEY}" }
+    }
+  }
+}

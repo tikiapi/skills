@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Look"
+  short_description: "Match a colour look in a generated shot"
+  default_prompt: "Use $tikiapi-look to match the colour look of this film still."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Character"
+  short_description: "Keep one person the same in every shot"
+  default_prompt: "Use $tikiapi-character to create a character I can reuse in every picture and clip."

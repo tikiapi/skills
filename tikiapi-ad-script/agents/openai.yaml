@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Ad Script"
+  short_description: "Short, funny ad scripts that anyone gets"
+  default_prompt: "Use $tikiapi-ad-script to write a 30-second ad script for my product and test it."

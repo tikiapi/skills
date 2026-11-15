@@ -1,0 +1,24 @@
+TikiAPI skills
+Copyright (c) 2026 TikiAPI. Licensed under the MIT License (see LICENSE), except for the files listed below.
+
+-------------------------------------------------------------------------------
+Seedance 2.5 Skill, by AtlasCloudAI
+https://github.com/AtlasCloudAI/awesome-seedance-2.5-prompts-skills
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+-------------------------------------------------------------------------------
+
+These files are adapted from that work and are distributed under CC BY 4.0:
+
+- tikiapi-ad-video/references/seedance-clips.md
+  Adapted from SKILL.md (route choice, scope of instructions, end states, review order, the billable task rules)
+  and from references/multi-reference.md and references/troubleshooting.md.
+- tikiapi-character/references/identity.md
+  The reference rules (a face close-up and a full body, never a turnaround sheet; which written details to drop when
+  a reference carries the identity) are adapted from references/real-person.md and references/multi-reference.md.
+
+Changes made: shortened and rewritten; the Atlas Cloud execution layer and runner scripts removed; every step mapped
+to TikiAPI's MCP tools and REST API; merged with TikiAPI's own production notes (identity block, two-reference
+limit, first-frame clips with "No speech", the black-level and white fade-in fixes, retry rules).
+
+Our changes to these files are also offered under CC BY 4.0. AtlasCloudAI does not endorse TikiAPI or these skills.
