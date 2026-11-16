@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Story Bible"
+  short_description: "Interview your world and write a skill that keeps it consistent"
+  default_prompt: "Use $tikiapi-story-bible to build a story bible for my series and install it as a skill."

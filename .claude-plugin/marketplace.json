@@ -8,15 +8,20 @@
     {
       "name": "tikiapi",
       "source": "./",
-      "description": "Images and video through TikiAPI: generation with live prices, consistent characters, ad videos from script to cut, audience tests and colour looks.",
-      "version": "0.1.0",
+      "description": "Images, video and sound through TikiAPI: generation with live prices, consistent characters and locations, a Seedance director, motion transfer, story bibles, launch videos, ad videos from script to cut, audience tests and colour looks.",
+      "version": "0.2.0",
       "skills": [
         "./tikiapi-generate",
         "./tikiapi-character",
+        "./tikiapi-location",
+        "./tikiapi-director",
+        "./tikiapi-motion-transfer",
+        "./tikiapi-story-bible",
         "./tikiapi-ad-video",
         "./tikiapi-ad-script",
         "./tikiapi-audience",
-        "./tikiapi-look"
+        "./tikiapi-look",
+        "./tikiapi-launch-video"
       ]
     }
   ]

@@ -18,7 +18,10 @@ below guards against one of them. Nothing here costs money; the gate at the end 
 
 Five lines:
 - **Message:** one sentence a child could repeat. "With a subscription one video costs $12; here it costs $2.50."
-- **Proof:** every number with its source and date. Never invent one: leave a marked gap and ask.
+  (Numbers from November 2026: prices change, so take ours fresh, see Proof.)
+- **Proof:** every number with its source and date. Never invent one: leave a marked gap and ask. Our own price comes
+  from `estimate_cost` (or `list_models`) on the day you write, never from an example here; if `list_models` shows a
+  `promo_until`, the price is a promo and the script says until when.
 - **Viewer:** one person in one moment, not a demographic.
 - **Action:** the one thing they should do.
 - **Must-haves:** length, format, language, cast, look, what is forbidden (real brands, real people, rivals' names).

@@ -14,7 +14,7 @@ Errors have the same shape everywhere: `{"error": {"code", "message", "hint"?, "
 | `insufficient_balance` | Stop. Give the person the `top_up_url`; never top up yourself |
 | `key_limit_reached` | The key's daily limit is spent. Tell the person; don't switch keys |
 | `rate_limited` | Wait the `Retry-After` seconds |
-| `payload_too_large` | MCP uploads take 20 MB; send bigger clips with `POST /v1/uploads` (50 MB) |
+| `payload_too_large` | Base64 through MCP takes 20 MB; send bigger clips with `upload_media` `mode: "prepare"` or `POST /v1/uploads` (50 MB) |
 | `model_unavailable` | Try again in a few minutes, or offer another listed model |
 
 ## On a failed order (nothing is charged)
@@ -31,4 +31,5 @@ Errors have the same shape everywhere: `{"error": {"code", "message", "hint"?, "
 ## Still running
 
 The MCP `generate` tool returns after about a minute with `status: running` and `poll_after_seconds`. That is normal
-for video. Keep calling `get_generation` with the same id; never place the order again.
+for video. Keep calling `get_generation` with the same id (or `wait_for_generations` for several); never place the
+order again.

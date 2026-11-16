@@ -19,7 +19,8 @@ These come from a 36-second ad that went through nine script versions and severa
 ## Example: "The Monthly Monster" (36 s, 9:16)
 
 One idea: a subscription costs about $12 a video; per video it's $2.50, with no subscription. One video track serves
-any language: no words inside the generated video, all text in the edit.
+any language: no words inside the generated video, all text in the edit. ($2.50 was our launch price in November 2026: a
+new script takes our price from `estimate_cost` on the day, and the rival's from its own page, dated.)
 
 | # | Time | Picture | Narrator line | On-screen text |
 |---|---|---|---|---|

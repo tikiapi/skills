@@ -43,5 +43,6 @@ It should print the balance. `invalid_api_key` means the key is wrong; ask the p
 
 ## 4. Done
 
-Tell the person the skills are installed and offer three starts: "make a 9:16 product photo", "write and test a
-30-second ad script", "make a vertical ad for my product, script to final cut". Don't explain the file layout.
+Tell the person the skills are installed and offer four starts: "make a 9:16 product photo", "turn this scene into a
+Seedance shot breakdown and prompt", "make a 20-second launch video of this project", "make a vertical ad for my
+product, script to final cut". Don't explain the file layout.

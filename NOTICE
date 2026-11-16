@@ -1,5 +1,6 @@
 TikiAPI skills
-Copyright (c) 2026 TikiAPI. Licensed under the MIT License (see LICENSE), except for the files listed below.
+Copyright (c) 2026 TikiAPI. Licensed under the MIT License (see LICENSE), except as stated below. Some files are
+adapted from third-party works: two stay under CC BY 4.0, and three include MIT-licensed material from brag.
 
 -------------------------------------------------------------------------------
 Seedance 2.5 Skill, by AtlasCloudAI
@@ -22,3 +23,48 @@ to TikiAPI's MCP tools and REST API; merged with TikiAPI's own production notes 
 limit, first-frame clips with "No speech", the black-level and white fade-in fixes, retry rules).
 
 Our changes to these files are also offered under CC BY 4.0. AtlasCloudAI does not endorse TikiAPI or these skills.
+
+-------------------------------------------------------------------------------
+brag, by latent-spaces
+https://github.com/latent-spaces/brag
+Copyright (c) 2026 Shunit Haviv Hakimi
+Licensed under the MIT License (full text below)
+-------------------------------------------------------------------------------
+
+These files are adapted from skills/brag-slim/SKILL.md in that work:
+
+- tikiapi-launch-video/SKILL.md
+  The structure (inspect, plan, build, check, render, deliver), the questions before planning, the shape of the
+  video and the delivery rules.
+- tikiapi-launch-video/references/creative-laws.md
+  The creative laws, the tones table and the sound rules.
+- tikiapi-launch-video/references/build-and-deliver.md
+  How to inspect a project or a website, what never to read, privacy, tools, and the build and render checks.
+
+Changes made: rewritten and reorganised into a TikiAPI skill with reference files; a second, paid path added
+(generated frames and clips, music, a sound effect and a voice line through the TikiAPI MCP server or REST API, priced
+with estimate_cost and stopped for the person's go); notes on generated shots, ffmpeg recipes for checks, the poster
+frame and the sound mix added; output names changed. tikiapi-launch-video/references/generated-assets.md and
+tikiapi-launch-video/agents/openai.yaml are TikiAPI's own. The authors of brag do not endorse TikiAPI or these skills.
+
+MIT License
+
+Copyright (c) 2026 Shunit Haviv Hakimi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

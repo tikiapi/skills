@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Launch Video"
+  short_description: "A 20-second launch video of your project or website"
+  default_prompt: "Use $tikiapi-launch-video to make a 20-second launch video of this project."

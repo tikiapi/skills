@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Motion Transfer"
+  short_description: "Copy a clip's movement or camera onto your character"
+  default_prompt: "Use $tikiapi-motion-transfer to put my character into the dance from this video."

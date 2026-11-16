@@ -6,10 +6,11 @@ The MCP server and the REST API run the same code: the same checks, the same pri
 |---|---|---|
 | `list_models` | `GET /v1/models` | Models, their limits and prices |
 | `estimate_cost` | `POST /v1/generations/estimate` | The price of an order; nothing is made or charged |
-| `generate` | `POST /v1/generations` | Places an order (MCP waits up to about a minute) |
-| `get_generation` | `GET /v1/generations/{id}` | Status and result |
+| `generate` | `POST /v1/generations` | Places an order (MCP waits up to about a minute; `wait: false` answers at once) |
+| `get_generation` | `GET /v1/generations/{id}` | Status and result, with a preview |
+| `wait_for_generations` | | Up to 12 orders, one wait of up to 50 s: the finished ones and the ones still running |
 | `list_generations` | `GET /v1/generations?limit=&before=` | Past orders, newest first |
-| `upload_media` | `POST /v1/uploads` | A local file as a 48-hour link |
+| `upload_media` | `POST /v1/uploads` | A local file as a 48-hour link and id: base64, a signed PUT (`mode: "prepare"`), or a public link |
 | `get_account` | `GET /v1/account` | Balance and the top-up link |
 | `create_character`, `list_characters` | | A saved person, reused by `character_id` in `generate` |
 | `speak`, `transcribe` | | Voice-over from text; speech to text with word timestamps |

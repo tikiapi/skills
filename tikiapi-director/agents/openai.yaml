@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Director"
+  short_description: "A scene into a shot list and a block-by-block Seedance prompt"
+  default_prompt: "Use $tikiapi-director to turn this scene into a Seedance shot breakdown and prompt."

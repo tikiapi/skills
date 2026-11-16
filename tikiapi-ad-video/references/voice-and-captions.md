@@ -12,7 +12,7 @@ Before any voice is made, read the lines as a listener who sees nothing:
 ## The take
 
 `speak` with:
-- **input:** the lines, in order;
+- **text** (MCP `speak`; `input` in REST `POST /v1/audio/speech`): the lines, in order;
 - **a voice direction:** who speaks, then one emotion cue per line, for example
   `[a young British woman with a low, husky, confident voice, cinematic like a movie trailer narrator]
   [slow, intriguing] This creator makes AI videos. [dark, tense] This is her subscription. [building tension] She feeds
@@ -42,4 +42,4 @@ THIS CREATOR MAKES AI VIDEOS.
 ## Timing the cut to the voice
 
 Put the voice in first (start it about 0.5 s in), then place every cut and stamp on its word: the stamp "$49 / MONTH"
-lands on "forty-nine", the coin lands on "two dollars fifty". A beat is as long as its line plus a breath, 2.5–3.5 s.
+lands on "forty-nine", the coin lands on our price as the voice says it. A beat is as long as its line plus a breath, 2.5–3.5 s.

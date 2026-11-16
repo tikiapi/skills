@@ -62,7 +62,9 @@ Say which one you chose and why.
 
 ## 5. Test, then check
 
-`estimate_cost`, then one 4-second clip (`duration` 4). Take its first and middle frames and measure them:
+Read `list_models` for the current video models and their limits (models and limits change), then `estimate_cost`,
+then one short test clip (`duration` 4, or the model's `min_seconds` if that is longer). Take its first and middle
+frames and measure them:
 
 ```bash
 ffmpeg -ss 0.1 -i clip.mp4 -frames:v 1 first.png

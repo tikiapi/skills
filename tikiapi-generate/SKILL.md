@@ -35,37 +35,50 @@ Use the first that works:
    aspect ratios, reference counts, image modes). Prices come from here only, never from memory.
 2. **Price.** `estimate_cost` (`POST /v1/generations/estimate`) before every video, and before any batch. Tell the
    person the price; check `enough_balance`.
-3. **Ask** before spending on video, unless the person asked for exactly that clip. One paid item at a time; show each
-   result before the next.
-4. **Make.** `generate` (`POST /v1/generations`). The MCP tool waits about a minute; REST answers at once unless you
-   send `Prefer: wait=60`.
+3. **Ask** before spending on video, unless the person asked for exactly that clip. Videos one at a time; show each
+   result before the next. Several pictures the person asked for may go together: `generate` with `wait: false` for
+   each, then one `wait_for_generations` with their ids (up to 12).
+4. **Make.** `generate` (`POST /v1/generations`). The MCP tool waits about a minute and reports its progress; REST
+   answers at once unless you send `Prefer: wait=60`.
 5. **Wait, never re-order.** While `status` is `queued` or `running`, check the same id with `get_generation`
-   (`GET /v1/generations/{id}`) every 10–15 s. A slow order is not a failed one. Placing it again pays twice.
-6. **Hand back links.** `outputs[].url`, with what it cost (`charged`). Send videos as links, not files. Results are
-   kept for 30 days (`expires_at`); download what must be kept.
+   (`GET /v1/generations/{id}`) after `poll_after_seconds`. A slow order is not a failed one. Placing it again pays twice.
+6. **Look, then hand back links.** The MCP answer shows a small preview of each result (a picture at 1024 px; a clip as
+   4 frames: its first, two from the middle, its last); check it before you send it on. Give `outputs[].url` (the
+   original), with what it cost (`charged`). Send videos as links, not files. Results are kept for 30 days
+   (`expires_at`); download what must be kept.
 
 ## 3. Inputs
 
-- A local file becomes a link with `upload_media` (MCP: base64, up to 20 MB) or `POST /v1/uploads` (REST: the raw
-  file; images 20 MB, video 50 MB, audio 15 MB). The link works for 48 hours.
+- A local file goes in with `upload_media` or `POST /v1/uploads` (REST: the raw file). Images up to 20 MB, video 50 MB,
+  audio 15 MB; kept 48 hours. `upload_media` takes it three ways: `mode: "prepare"` with the file's `bytes` gives a
+  signed link and a ready `curl` command to send the file yourself (best whenever you have a shell: no base64 in the
+  chat); `url` fetches a public link; `data` takes base64 (up to 20 MB). The answer's `id` (`up-…` or `put-…`) or its
+  `url` goes into an order, a character or an edit.
 - MCP fields are `image_urls`, `video_urls`, `audio_urls`; REST fields are `images`, `videos`, `audios`.
 - Video `image_mode`: `reference` (default: things to bring in, several images), `first_frame` (the clip opens on the
   one image), `first_last_frame` (opens on the first, ends on the second). Frames and references don't mix.
-- In a Seedance prompt, name the references in order: "image 1", "image 2", and say what each one controls.
+- In a Seedance prompt, name the references by kind and order: "image 1", "image 2", "video 1", "audio 1", and say
+  what each one controls.
 - `audio: false` asks for a silent clip where the model allows it (`audio_optional` in the model list).
 
 ## 4. Which model
 
-Check `list_models` first; these are the usual picks.
+Models, limits and prices change often. Check `list_models` first: its `capabilities` (`max_seconds`,
+`max_reference_images`, `max_reference_videos`, `max_reference_video_seconds`, `max_reference_audios`, `resolutions`,
+`aspect_ratios`, `image_modes`) are the only limits to trust, and its `pricing` the only prices. These are today's
+usual picks, as examples; if one is gone, take the closest of its kind from `list_models`:
 
 | Job | Model id |
 |---|---|
-| Video with sound, up to 30 s, from text, references or a first frame | `seedance-2.5` |
+| Video with sound and the longest clips, from text, references, a reference video or a first frame | `seedance-2.5` |
 | Cheaper or shorter video drafts | `seedance-2.0-fast`, `seedance-2.0` |
 | A picture with people or products kept from references | `nano-banana-pro` (at most 2 references) |
 | A picture with readable words in it | `gpt-image-2.6-sunburst` |
 | Fast drafts, boards, many variants | `nano-banana-2`, `seedream-5.0-flash` |
 | Large, detailed stills and storyboards | `seedream-5.0-pro` |
+| A song or an instrumental music bed (`lyrics`, `style`, `instrumental`; two takes an order) | `suno-v6` |
+| A sound effect from a description | `elevenlabs-sfx-v3` |
+| A voice-over with `speak` (a voice direction, emotion cues in brackets) | `fish-audio-drama-3` |
 
 ## 5. Spending rules
 
@@ -82,5 +95,9 @@ Errors and fixes: [troubleshooting](references/troubleshooting.md).
 ## Related skills
 
 - `tikiapi-character`: the same person across every picture and clip.
-- `tikiapi-ad-video`: a whole ad, script to final cut.
+- `tikiapi-location`: the same place across every angle and first frame.
+- `tikiapi-director`: a scene into a shot breakdown and a block-by-block Seedance prompt.
+- `tikiapi-motion-transfer`: a reference video's movement or camera on your character.
+- `tikiapi-story-bible`: a whole world kept consistent across a series.
+- `tikiapi-ad-video`: a whole ad, script to final cut. `tikiapi-launch-video`: a project or website as a launch video.
 - `tikiapi-look`: a colour look measured and matched.

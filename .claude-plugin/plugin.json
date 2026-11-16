@@ -1,7 +1,7 @@
 {
   "name": "tikiapi",
-  "version": "0.1.0",
-  "description": "TikiAPI skills for images and video: generation with live prices, consistent characters, ad videos end to end, ad scripts, audience tests and colour looks. Uses the TikiAPI MCP server or REST API with your key from TIKIAPI_KEY.",
+  "version": "0.2.0",
+  "description": "TikiAPI skills for images, video and sound: generation with live prices, consistent characters and locations, a Seedance director, motion transfer from a reference video, story bibles, launch videos, ad videos end to end, ad scripts, audience tests and colour looks. Uses the TikiAPI MCP server or REST API with your key from TIKIAPI_KEY.",
   "author": {
     "name": "TikiAPI",
     "url": "https://tikiapi.com"
@@ -17,9 +17,14 @@
     "nano-banana",
     "ai-video",
     "ai-image",
+    "video-prompt",
+    "motion-transfer",
+    "story-bible",
+    "launch-video",
     "ad-video",
     "ad-script",
     "consistent-character",
+    "location",
     "voice-over",
     "color-grading",
     "mcp"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikiAPI Location"
+  short_description: "One place, consistent in every angle and first frame"
+  default_prompt: "Use $tikiapi-location to build a night kiosk set I can shoot from several angles."

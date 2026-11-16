@@ -56,8 +56,9 @@ One first frame per beat, 9:16, 2K. Rules and a prompt pattern: [frames](referen
 
 ## 5. Cost, then stop
 
-`estimate_cost` for every clip (`seedance-2.5`, `duration` 4, `resolution` 720p, `image_mode` `first_frame`, one
-frame each). Add the voice if `list_models` prices it. Give the total in one line and **wait for the go**. No clip,
+`estimate_cost` for every clip (today `seedance-2.5`, `duration` 4, `resolution` 720p, `image_mode` `first_frame`,
+one frame each; check `list_models` for the current model, its limits and its prices). Add the voice if `list_models`
+prices it. Give the total in one line and **wait for the go**. No clip,
 not even a test, before it.
 
 ## 6. Clips

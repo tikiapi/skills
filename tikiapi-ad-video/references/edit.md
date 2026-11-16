@@ -30,8 +30,9 @@ What worked in the 36-second ad, as a style ("crime file"):
   outline ("THE CREATOR"), one line under it on a paper strip ("Makes AI videos."). 2.2 s.
 - **Stamp:** the price in heavy letters in a rotated box with a short camera shake as it lands; red for theirs, yellow
   for ours. 1.5–3 s.
-- **End card:** the logo, "$12 A VIDEO" struck through, "$2.50 A VIDEO" stamped, the address as a big button, the
-  launch-price note in readable text, the plan maths in one small line.
+- **End card:** the logo, "$12 A VIDEO" struck through, our price per video stamped (from `estimate_cost` on the day,
+  never from an old cut), the address as a big button, the promo note in readable text when `list_models` shows a
+  `promo_until`, the plan maths in one small line.
 
 ## ffmpeg recipes (when no editor is at hand)
 
